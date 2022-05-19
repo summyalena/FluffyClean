@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Museo Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-display: optional;
+    src: local("Museo Sans 500"),
+      url("/fonts/MuseoSans_500.woff2") format("woff2");
+    /* url('./fonts/K2D.woff') format('woff'), */
+    /* url('./fonts/K2D.ttf') format('truetype'), */
+    /* url('./fonts/K2D.eot') format('embedded-opentype'); */
+  }

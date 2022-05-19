@@ -1,0 +1,24 @@
+.review .slick-arrow.slick-prev,
+.review .slick-arrow.slick-next{
+  background: green;
+   width:40px;
+  height:40px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 8;
+  border-radius:5px;
+}
+
+.slick-prev::before,
+.slick-next::before{
+     /* display:none; */
+}
+
+.review .dots{
+    font-size:15px;
+}
+
+.main{
+    background-color:#08374e ;
+}

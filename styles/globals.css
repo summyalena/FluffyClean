@@ -1,0 +1,11 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'MuseoModerno', cursive;
+}  
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

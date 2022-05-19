@@ -1,0 +1,15 @@
+.btn{
+    background-color: red;
+    padding:6px;
+    color:white;
+    display: flex;
+    border-radius:5px;
+    margin-bottom: 5px;
+    margin-left:710px;
+}
+
+@media screen and (max-width:760px){
+    .btn{
+        margin-left:350px;
+    }
+}
