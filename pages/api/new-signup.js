@@ -2,13 +2,14 @@
 import {MongoClient} from 'mongodb'
 // const MONGO_URL = process.env.MONGO_URL
 
+
 async function handler(req,res){
     if(req.method === 'POST'){
 
         const data = req.body;
 
         const client = await MongoClient.connect("mongodb+srv://alena:AlEnA1999@cluster0.ex3c2.mongodb.net/users?retryWrites=true&w=majority");
-
+       
         const db = client.db();
 
         const UserCollection = db.collection('users');
