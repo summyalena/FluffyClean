@@ -1,10 +1,9 @@
 .container{
     height: calc(100vh - 100px);
-    /* width:100vw; */
+    width:99vw;
     background-color:#e1f4fc;
     overflow: hidden;
-    position: relative;
-    
+    position: relative; 
 }
 
 .arrowContainer{
@@ -33,6 +32,6 @@
  @media screen and (max-width:768px){
      .container{
          height: calc(100vh - 100px);
-
+         width: 100vw;
      }
  }

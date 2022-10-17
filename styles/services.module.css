@@ -1,9 +1,9 @@
 .card{
-    height:calc(100vh - 100px);
+    /* height:calc(100vh - 100px); */
     padding:20px 20px;
     display:flex;
     flex-direction: column;
-    width:95.8vw;
+    width:100%;
     margin:20px 0px;
     background-color:#e8f4fa;
 }
@@ -29,8 +29,9 @@
      }
 }
 .wrapper{
-    display: flex;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #e8f4fa;
     align-items: center;
     justify-content: center;
 }
@@ -48,13 +49,14 @@
 }
 
 .cardContent:nth-child(2){
-     height:45vh;
+    
      overflow:hidden;
      background-image: url("/img/elaundry.jpeg");
      
 }
 .cardContent:nth-child(3){
     background-image: url("/img/notify.jpg");
+    overflow: hidden;
 }
 /* .cardContent:hover{
       transform:scale(1.1)
@@ -180,23 +182,37 @@
   
 }
 
+@media (max-width:989px) and (min-width:768px){
+  .wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+  }
+}
+
 @media screen and (max-width:760px){
    .card{
-       height:350vh;
-       margin-top:100px;
+       /* height:calc(100vh); */
+       padding:20px 20px;
+       display:flex;
+       flex-direction: column;
+       width:100%;
+       margin:20px 0px;
    }
     .wrapper{
-      display: flex;
-      flex-direction: column;
-      /* margin-top:10px; */
-      height:100%;
+      display: grid;
+      grid-template-columns: auto;
   }
   .cardContent{
       width:100%;
-      height: fit-content;
-      margin:20px 0;
+      height: 90%;
+      margin: 10px 5px;
   }
   .cardContent:nth-child(2){
-      height: fit-content;
+      height: 90%;
+  }
+  .cardContent:nth-child(3){
+    height: 90%;
   }
 }

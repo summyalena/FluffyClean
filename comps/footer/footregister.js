@@ -12,6 +12,7 @@ const Footer = () => {
           <p> Login if you already have an account</p>
           <button className={styles.footsign}> Login!</button>
         </div>
+        <div className={styles.footright}>
         <div className={styles.footnav}>
           <h4> Quick Links</h4>
           <a>About Us</a>
@@ -23,8 +24,12 @@ const Footer = () => {
           <a>LinkedIn</a>
           <a> Facebook</a>
           <a> Google</a>
+          </div>
         </div>
       </div>
+      <div className={styles.footText}>
+          All rights reserved
+        </div>
     </footer>
   );
 };

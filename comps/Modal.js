@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
 import styled from "styled-components"
 import styles from '../styles/modal.module.css'
-function Modal({show, onClose, children, Data}) {
+function Modal({show, onClose, children}) {
    const [isBrowser, setIsBrowser] = useState(false);
 
    useEffect(()=>{
@@ -22,14 +22,16 @@ function Modal({show, onClose, children, Data}) {
              <button className={styles.btn}>Close</button>
            </a>
          </StyledModalHeader>
-             <StyledModalBody Data={Data}>    {children} </StyledModalBody>
+             <StyledModalBody>  
+               {children} 
+               </StyledModalBody>
        {/* </StyledModal> */}
      </StyledModalOverlay>
    ) : null;
    if(isBrowser){
      return ReactDOM.createPortal(
          modalContent,
-       document.getElementById("modal-root")
+       document.getElementById("modal-root") 
      );
    } else{
      return null;
@@ -45,6 +47,7 @@ function Modal({show, onClose, children, Data}) {
    justify-content:end;
    align-items:end;
    font-size: 15px;
+   margin-top: 2.5em;
  `;
  
 //  const StyledModal = styled.div`
@@ -55,9 +58,9 @@ function Modal({show, onClose, children, Data}) {
 //    padding: 10px;
 //  `;
  const StyledModalOverlay = styled.div`
-   position: absolute;
+   position: fixed;
    top: 0;
-   height:calc(100vh - 100px);
+   height:calc(100vh - 200px);
    left: 0;
    width: 100%;
    height: 100%;

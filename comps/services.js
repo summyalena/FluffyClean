@@ -16,7 +16,7 @@ function services() {
       machines with ease and convenience</p>
       </div>
      <div className={styles.button}>
-      <Link href=""><a className={styles.button}> Book Now</a></Link>
+      <Link href="/loginmain"><a className={styles.button}> Book Now</a></Link>
       </div>
     </div>
 
@@ -33,7 +33,7 @@ function services() {
           you can look and feel just comfortable.</p>
       </div>
      <div className={styles.button}>
-      <Link href=""><a className={styles.button}> More Details</a></Link>
+      <Link href="/contact"><a className={styles.button}> More Details</a></Link>
       </div>
     </div>
     </div>
@@ -48,7 +48,7 @@ function services() {
            out on reservations that have been made</p>
       </div>
      <div className={styles.button}>
-      <Link href=""><a className={styles.button}> More Details</a></Link>
+      <Link href="/contact"><a className={styles.button}> More Details</a></Link>
       </div>
     </div>
     </div> 

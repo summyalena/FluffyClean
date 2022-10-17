@@ -1,9 +1,10 @@
 
 .container{
     background-color: #a2adb369;
-    width: 98.8vw;
-    height: 50vh;
+    width: 100%;
+    min-height: 50vh;
 }
+
 .wrapper{
     justify-content: center;
     justify-content:space-around;
@@ -68,11 +69,24 @@
     text-decoration: none;
     
 }
-@media screen  and (max-width:760px) {
+@media screen  and (max-width:768px) {
     .container{
         display: flex;
+        width: 100%;
+        min-height: 30vh;
+    }
+    .wrapper{
+        display: flex;
         flex-direction: column;
-        width: 100vw;
-        height: 50vh;
+        height: 100%;
+        width: 100%;
+    }
+    .links{
+        display: flex;
+        align-items: center;
+        gap: 0;
+    }
+    .link{
+        margin:0 0 ;
     }
 }

@@ -1,8 +1,6 @@
 import React from 'react'
-import styles from '../styles/aboutContent.module.scss'
+// import styles from '../styles/aboutContent.module.scss'
 import Arrow from '../public/img/arrow-right.svg'
-import Girl from '../public/img/laundryabout.webp'
-import Boy from '../public/img/laundrymainabout.webp'
 import Image from 'next/image'
 import {motion} from "framer-motion"
 import {useEffect} from 'react'
@@ -58,19 +56,21 @@ function aboutContent() {
                              </div>
                              </button> 
                       </div>
+
                   </div>
+                  
               </div>
               <div className={styles.mainImages}>
                   <div className={styles.mainImagesInner}>
                       <div className={`${styles.mainImage} ${styles.Girl}`}>
                        
-                        <Image  src={Girl} alt="manchild" />
+                        <Image src={Girl} alt="manChild" />
                          
                           </div>
 
                           <div  className={`${styles.mainImage} ${styles.boy}`}>
                           
-                        <Image  src={Boy} alt="manchild" />
+                        <Image src={Boy} alt="ladyChild" />
                          
                           </div>
                   </div>

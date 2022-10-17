@@ -5,7 +5,7 @@ import { Avatar } from "@mui/material";
 import styles from "../styles/review.module.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/material";
-import {data} from '../comps/data'
+import data from '../comps/data'
 
 const Previous = (props) => {
   console.log(props)
@@ -32,24 +32,25 @@ function review() {
   // we will create a function that handles the onClick of the arrow
   
   return (
-    <div  className={styles.main} style={{ height: "100vh"}}>
+    <div  className={styles.main} style={{ height: "55vh", width:"99vw"}}>
       <div
         className={styles.review}
-        style={{ display: "flex", marginTop: 50, justifyContent: "center" }}
+        style={{ display: "flex", marginTop: 5, justifyContent: "center" }}
       >
-        <div style={{ width: "50%",textAlign:"center", marginTop:100}}>
+        <div style={{ width: "85%",textAlign:"center", marginTop:100}}>
           {/* to use a custom icon we have to pass a prop to the slider */}
-           <h1 style={{marginBottom: 20}}>Reviews</h1>
+           <h1 style={{marginBottom: 10}}>Reviews</h1>
           <Slider
               //  prevArrow={<Previous/>}
               //  nextArrow={<Next/>}
               dots
           >
-            <Card data ={data} img="/img/lady.png" />
+            {/* <Card data ={data} img="/img/lady.png" />
             <Card img="/img/man.png" />
             <Card img="/img/gril2.png" />
             <Card img="/img/man2.png" />
-            <Card img="/img/girl3.png" />
+            <Card img="/img/girl3.png" /> */}
+            {data.map((one)=> <Card key={one.id} name={one.name} img={one.image} review={one.review} />)}
           </Slider>
         </div>
       </div>
@@ -57,7 +58,7 @@ function review() {
   );
 }
 
-const Card = ({ img }) => {
+const Card = ({ name, img, review }) => {
   return (
     <div
       style={{
@@ -88,7 +89,7 @@ const Card = ({ img }) => {
           padding: 7,
         }}
       />
-      <p>I have had the best experience using fluffyclean services</p>
+      <p>{review}</p>
       <p>
         <span
           style={{
@@ -98,7 +99,7 @@ const Card = ({ img }) => {
             color: "green",
           }}
         >
-          Alma Tima
+          {name}
         </span>
         , Public Advocate
       </p>

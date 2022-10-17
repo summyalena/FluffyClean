@@ -36,7 +36,7 @@ import Image from 'next/image'
           
             {images.map((img, i)=>(
               <div className={styles.imageContainer} key={i}>
-                <Image layout="fill"  src={img} alt=""/>
+                <Image layout='fill'  src={img} alt=""/>
                </div>
             ))}
          
