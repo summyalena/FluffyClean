@@ -1,11 +1,13 @@
 import React, {useEffect, useState} from 'react'
 import Profile from '../comps/profile/profile'
 import Header from '../comps/Header/Header';
+import styles from '../styles/profiles.module.css';
 import { db } from './firebaseConfig';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from './firebaseConfig';
 import { getDocs, collection, query, where } from 'firebase/firestore';
-import Navbar from '../comps/sidenavbar/sidenavbar'
+import Navbar from '../comps/sidenavbar/sidenavbar';
+
 function Prof() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('')
@@ -34,10 +36,10 @@ function Prof() {
   }, [user]);
 
   return (
-       <div className=''>
+       <div className={styles.profileContainer}>
             <div>
+            <Navbar/>
             <Header name={name}/>
-       <Navbar/>
        <Profile name={name} email={email}/>
        </div>
     </div>

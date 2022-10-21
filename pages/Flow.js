@@ -1,11 +1,13 @@
 import React from 'react'
-import Flo from '../comps/flow/flowNew';
+// import Flo from '../comps/flow/flowNew';
+import Table from '../comps/flow/flowOdd';
 import Navbar from '../comps/sidenavbar/sidenavbar'
 function Flow() {
   return (
-    <div className=''>
+    <div className='mt-0'>
         <Navbar/>
-      <Flo/>
+        <Table/>
+      {/* <Flo/> */}
     </div>
   )
 }

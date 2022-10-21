@@ -41,15 +41,8 @@ function review() {
           {/* to use a custom icon we have to pass a prop to the slider */}
            <h1 style={{marginBottom: 10}}>Reviews</h1>
           <Slider
-              //  prevArrow={<Previous/>}
-              //  nextArrow={<Next/>}
               dots
           >
-            {/* <Card data ={data} img="/img/lady.png" />
-            <Card img="/img/man.png" />
-            <Card img="/img/gril2.png" />
-            <Card img="/img/man2.png" />
-            <Card img="/img/girl3.png" /> */}
             {data.map((one)=> <Card key={one.id} name={one.name} img={one.image} review={one.review} />)}
           </Slider>
         </div>

@@ -16,7 +16,7 @@ import SignUp from './signUp'
 import { useRouter } from 'next/router';
 
 
-function login() {
+function login({ onLogin }) {
   const auth = getAuth();
    const [email, setEmail] = useState('');
    const [password, setPassword] = useState('')
@@ -33,25 +33,40 @@ const loginGoogle = () => {
   router.push('/dashindex');
 }
 
-const logIn = async (email, password) => {
-   try {
-      await signInWithEmailAndPassword(auth, email, password);
-      console.log(user)
-      console.log(user.credentials)
-      sessionStorage.setItem('Token', user.accessToken)
-   } catch(err) {
-    console.log(err)
-    alert(err.message);
-   }
-}
+// const logIn = async (email, password) => {
+//    try {
+//       await signInWithEmailAndPassword(auth, email, password);
+//       console.log(user)
+//       console.log(user.credentials)
+//       sessionStorage.setItem('Token', user.accessToken)
+//       router.push('/dashindex');
+//       onLogin(false);
+//    } catch(err) {
+//     console.log(err)
+//     alert(err.message);
+//    }
+// }
 
+const logIn = async () => {
+    try{
+       await signInWithEmailAndPassword(auth, email, password);
+       sessionStorage.setItem('Token', user.accessToken);
+       router.push('/dashindex');
+       onLogin(false);
+    } catch(err){
+       alert(err.message);
+       console.log(err.message);
+    }
+}
 
 useEffect(() => {
   let token = sessionStorage.getItem('Token');
  if (loading){
   return;
  }
- if(user && token) router.push('/dashindex');
+ if(user && token) {
+  router.push('/dashindex');
+ }
 }, [user, loading])
 
   return (
@@ -86,7 +101,7 @@ useEffect(() => {
            </div>
            <p className={styles.px}>or use your email account</p>
             
-             <form>
+             <form onSubmit={(e)=> e.preventDefault()}>
            <div className={styles.email}>
               <div className={styles.mail}>
                 <FaRegEnvelope className={styles.ico}/> 

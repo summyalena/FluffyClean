@@ -4,10 +4,6 @@ import { useRouter } from "next/router";
 
 const flow = () => {
   const router = useRouter();
-  // const onSubmit = () => {
-  //   router.push("/invoice");
-
-  // };
 
   return (
     <>

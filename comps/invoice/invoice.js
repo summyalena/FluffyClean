@@ -5,6 +5,11 @@ const invoice = () => {
     const handlePrint = ()=>{
            window.print()
     }
+
+    const payment = () => {
+
+    }
+    
   return (
          <div className="container ml-5">
              <div className=" m-5 p-5 xl:max-w-3xl xl:mx-auto xl:justify-center bg-white rounded shadow">
@@ -18,7 +23,7 @@ const invoice = () => {
              <p>Token Number:</p>
              </article>
              <div className="d-grid gap-2 col-6 mx-auto">
-             <button>Proceed</button>     
+             <button onClick={payment}>Proceed</button>     
              </div>
              </div>
                   </div>

@@ -1,5 +1,6 @@
 .navcontainer{
     left:0;
+    margin-top: 0;
     width:20%;
     box-shadow: 3px 0px 6px 0px rgba(246,246,246,0.75);
     height:100%;

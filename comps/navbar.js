@@ -3,16 +3,22 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Img from '../public/vector/default-monochrome.svg'
 import NavItem from "./NavItem";
-// import NewSignup from '../pages/new-signups';
 import Login from '../comps/login';
 import Modal from '../comps/Modal';
 
 const MENU_LIST = [
-  { text: "Home", href: "/" },
-  { text: "About Us", href: "/about" },
-  { text: "Contact", href: "/contact" },
-  {text: "Book Now", href: "/dashindex"},
+  { text: "Home", 
+  href: "/" },
+  { text: "About Us",
+   href: "/about" },
+  { text: "Contact",
+   href: "/contact" },
+  {text: "Book Now", 
+  href: "/dashindex"},
+  {text: "Sign out", 
+  href: "/logout"},
 ];
+
 const Navbar = () => {
   const [modal, setModal] = useState(false);
   const [navActive, setNavActive] = useState(null);
@@ -49,7 +55,7 @@ const Navbar = () => {
            <button className={`btn`} onClick={()=> setModal(true)}>Sign In</button>
         <Modal onClose={()=> setModal(false)}
          show={modal}>
-          <Login/>
+          <Login onLogin={setModal}/>
          </Modal>
         </div>
       </nav>

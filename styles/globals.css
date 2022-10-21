@@ -27,11 +27,13 @@ a{
   color: inherit;
   color: #a8d1e2;
 }
+
 header{
   position: sticky;
   z-index: 30;
   top: 0;
 }
+
 nav{
   display: flex;
   padding: 16px;
@@ -57,7 +59,6 @@ nav{
   position: fixed;
   top: 60px;
   width: 100%;
-  /* justify-content: center; */
   align-items: center;
   row-gap: 4em;
   color: white;
@@ -101,6 +102,7 @@ nav{
   .nav__menu-bar{
     display: none;
   }
+
   .nav__menu-list{
     position: unset;
     flex-direction: row;
@@ -111,6 +113,7 @@ nav{
     background-color: #e1f4fc;
     align-items: center;
   }
+
   .nav__link::before{
     content: '';
     position: absolute;
@@ -118,10 +121,14 @@ nav{
     height: 6px;
     bottom: -16px;
     left: 0;
-    background-color: black;
+    background-color: #08374e;;
     transition: all 0.2s;
   }
   
+  .nav__link {
+    color: #08374e;
+  }
+
   .nav__link:hover:before{
    width: 100%;
   }
